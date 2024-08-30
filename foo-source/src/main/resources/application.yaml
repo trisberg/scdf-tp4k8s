@@ -12,7 +12,7 @@ spring:
           supplyFoo-out-0: output
       bindings:
         output:
-          destination: foo-source
+          destination: foo-result
 ---
 spring:
   config:
