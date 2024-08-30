@@ -1,0 +1,44 @@
+id: 5a541a60-3ebf-4c62-b5f0-21eb85a2b3d7
+timestamp: 2024-08-30T20:19:37.367Z
+source: VSCODE
+username: risbergt
+options:
+  projectName: bar-sink
+  groupId: com.vmware.tanzu
+  packageName: com.vmware.tanzu.streams
+  mainClassName: StreamApplication
+  objectModelClassName: Foo
+  applicationRole: sink
+  sourceChannel: foo-source
+  sourceChannelGroup: foo-source-group
+  resultChannel: foo-result
+  resultChannelGroup: foo-result-group
+  msgBrokerName: stream-broker
+  liveUpdateIDESupport: true
+  includeBuildToolWrapper: true
+accelerator:
+  name: spring-streaming-app
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: spring-streaming-app
+    ref: main
+    commit: 88a4d78a82c6679e6060865e98793780746bf88b
+fragments:
+  - name: build-wrapper-maven
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/build-wrapper-maven
+      ref: main
+      commit: 88a4d78a82c6679e6060865e98793780746bf88b
+  - name: live-update
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/live-update
+      ref: main
+      commit: 88a4d78a82c6679e6060865e98793780746bf88b
+  - name: tap-workload
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/tap-workload
+      ref: main
+      commit: 88a4d78a82c6679e6060865e98793780746bf88b

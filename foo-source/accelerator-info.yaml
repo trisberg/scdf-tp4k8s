@@ -1,0 +1,44 @@
+id: 8be10247-9d7d-4356-9588-f3e509d0c178
+timestamp: 2024-08-30T20:20:25.282Z
+source: VSCODE
+username: risbergt
+options:
+  projectName: foo-source
+  groupId: com.vmware.tanzu
+  packageName: com.vmware.tanzu.streams
+  mainClassName: StreamApplication
+  objectModelClassName: Foo
+  applicationRole: source
+  sourceChannel: foo-source
+  sourceChannelGroup: foo-source-group
+  resultChannel: foo-result
+  resultChannelGroup: foo-result-group
+  msgBrokerName: stream-broker
+  liveUpdateIDESupport: true
+  includeBuildToolWrapper: true
+accelerator:
+  name: spring-streaming-app
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: spring-streaming-app
+    ref: main
+    commit: 88a4d78a82c6679e6060865e98793780746bf88b
+fragments:
+  - name: build-wrapper-maven
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/build-wrapper-maven
+      ref: main
+      commit: 88a4d78a82c6679e6060865e98793780746bf88b
+  - name: live-update
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/live-update
+      ref: main
+      commit: 88a4d78a82c6679e6060865e98793780746bf88b
+  - name: tap-workload
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/tap-workload
+      ref: main
+      commit: 88a4d78a82c6679e6060865e98793780746bf88b
